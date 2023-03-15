@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main.xml"
+    app:startDestination="@id/redditFragment">
+
+    <fragment
+        android:id="@+id/redditFragment"
+        android:name="com.svape.redditjson.ui.RedditFragment"
+        android:label="fragment_reddit"
+        tools:layout="@layout/fragment_reddit" >
+        <action
+            android:id="@+id/action_redditFragment_to_redditDetailFragment"
+            app:destination="@id/redditDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/redditDetailFragment"
+        android:name="com.svape.redditjson.ui.RedditDetailFragment"
+        android:label="fragment_reddit_detail_frgment"
+        tools:layout="@layout/fragment_reddit_detail_frgment" >
+        <argument
+            android:name="redditId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
